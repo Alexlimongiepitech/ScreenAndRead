@@ -1,13 +1,8 @@
 This project is for screenshot one thing and get the texte of the picture
 
-dependence :
-
-Python3
-
-pip3
-
-PyAutoGUI
-
-pytesseract
-
+dependence :<br />
+Python3<br />
+pip3<br />
+PyAutoGUI<br />
+pytesseract<br />
 tesseract-ocr (you have setup in requirements file)
