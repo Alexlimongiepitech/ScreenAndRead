@@ -1,4 +1,4 @@
-This project is for screenshot one thing and get the texte of the picture
+This project is for screenshot one thing and get the text in the picture
 
 dependence :<br />
 Python3<br />

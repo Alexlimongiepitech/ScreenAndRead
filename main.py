@@ -14,7 +14,7 @@ def firstStart():
 
 def config():
     """
-        Functions for config the who start the picture and it size
+        Functions for config the who start the picture and it's size
     """
     input("put where is the top-right and press enter")
     x, y = pyautogui.position()
@@ -28,8 +28,8 @@ def config():
     return screenRegion
 
 def getconfig():
-    """
-        Functions for get the Config.txt
+    """    
+        Functions for getting the Config.txt
     """
     configFile = open("Config.txt", "r")
     splited = configFile.read().split(', ')
@@ -42,7 +42,7 @@ def getconfig():
 
 def main():
     pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe" # path for tesseract.exe
-    # tessdata_dir_config = '--tessdata-dir "C:\\Program Files (x86)\\Tesseract-OCR\\tessdata"' # path for tessdata, if you have error on language un-comment this line
+    # tessdata_dir_config = '--tessdata-dir "C:\\Program Files (x86)\\Tesseract-OCR\\tessdata"' # path to tessdata, if you have an error on the language, uncomment this line
     cmd = ""
     screenNumber = 0
     screenRegion = ()
@@ -80,7 +80,7 @@ def main():
             while (os.path.exists(screenPath)):
                 screenNumber = screenNumber + 1
                 screenPath = str(path + "/screenshot_" + str(screenNumber) + ".png")
-            screen = pyautogui.screenshot(screenPath, region=screenRegion) # comment if tessdata_dir_config is desable
+            screen = pyautogui.screenshot(screenPath, region=screenRegion) # comment if tessdata_dir_config is disable
             # screenText = pytesseract.image_to_string(screen, lang='eng', config=tessdata_dir_config) # un-comment if tessdata_dir_config is active
             screenText = pytesseract.image_to_string(screen, lang='eng')
             print(screenText)
